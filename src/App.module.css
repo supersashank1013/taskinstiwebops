@@ -1,0 +1,112 @@
+.app {
+  min-height: 100vh;
+  background: var(--cream);
+}
+
+.main {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 28px 32px 60px;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+/* ── Skeleton ── */
+.skeleton {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(26,23,20,0.06);
+}
+
+.skelImg {
+  height: 220px;
+  background: linear-gradient(90deg, var(--cream-dark) 0%, #ece9e0 50%, var(--cream-dark) 100%);
+  background-size: 600px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+.skelBody {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skelLine {
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--cream-dark) 0%, #ece9e0 50%, var(--cream-dark) 100%);
+  background-size: 600px 100%;
+  animation: shimmer 1.6s infinite linear;
+}
+
+/* ── Error ── */
+.error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fde8e8;
+  color: var(--red);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(192,57,43,0.15);
+}
+
+/* ── Empty ── */
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 80px 20px;
+  color: var(--ink-ghost);
+}
+
+.emptyTitle {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--ink-mid);
+}
+
+.emptySub {
+  font-size: 14px;
+  color: var(--ink-light);
+}
+
+/* ── Footer ── */
+.footer {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.footerDivider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--ink-ghost) 20%, var(--gold) 50%, var(--ink-ghost) 80%, transparent);
+  margin-bottom: 20px;
+}
+
+.footer p {
+  font-family: var(--font-display);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  color: var(--ink-light);
+  text-transform: uppercase;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 18px; }
+}
+
+@media (max-width: 600px) {
+  .main { padding: 20px 16px 48px; }
+  .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 14px; }
+}
